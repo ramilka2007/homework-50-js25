@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Task-1</title>
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<header>
+    <h1>My favorite films:</h1>
+</header>
+
+<div class="container">
+    <div id="app"></div>
+</div>
+<script type="text/babel">
+    const Film = ({img, name, year, description}) => {
+        return (
+          <div className="film">
+              <div id="imgOfFilm">
+                  <img src={img} alt={`${name}`}/>
+              </div>
+              <h1>{name}</h1>
+              <strong>{year}</strong>
+              <p> <h2>Plot:</h2> <br/> {description}</p>
+          </div>
+        );
+    };
+
+    const films = (
+        <>
+            <Film img="https://m.media-amazon.com/images/M/MV5BZjJiYTExOTAtNWU0Yi00NzJjLTkwOTgtOTU2NWM1ZjJmYWVhXkEyXkFqcGdeQXVyMTkxNjUyNQ@@._V1_.jpg" name="Maleficent: Mistress of Evil" year="October 18, 2019." description="Princess Aurora has grown up, and now Prince Philip proposes to her. Naive young people are confident that their marriage will be able to unite the two kingdoms and reconcile people with magical creatures, but that was not the case. At a joint dinner with Philip's parents - King John and Queen Ingrith - where Aurora's godmother was also invited, a quarrel occurs, as a result of which the king falls ill with an illness of an apparently magical nature, and Maleficent is forced to flee."/>
+            <Film img="https://lumiere-a.akamaihd.net/v1/images/p_disneyplusoriginals_themarvels_poster_rebrand_8c17eea5.jpeg" name="The Marvels" year="November 10, 2023." description="While investigating the origin of the jump point anomaly, Carol Danvers and Monica Rambeau independently touch it at the same time and thereby confuse their powers with Kamala Khan. Now the girls switch places when one of them uses superpowers. Meanwhile, the leader of the Kree, with the help of one of the Quantum Bracers (exactly the same one that Kamala inherited), is trying to save her planet from destruction by stealing resources from other planets. To prevent chaos, Carol, Monica and Kamala, enthusiastic about the upcoming adventure, will have to learn to work as a team."/>
+            <Film img="https://m.media-amazon.com/images/M/MV5BYWJkY2Q4NmYtOGRlMi00YTg5LWE2ZmQtY2NkYzk3YTRmNWZlXkEyXkFqcGdeQXVyMTY3ODkyNDkz._V1_.jpg" name="Madame Web" year="February 14, 2024." description="Manhattan nurse Cassandra Webb discovers her ability to see the future and realizes she can use this power to change it. Confronted with the secrets of her past, Cassandra meets three girls who are destined to one day become great if they can survive the deadly present together."/>
+        </>
+    );
+
+    ReactDOM.render(films, document.getElementById("app"))
+</script>
+</body>
+</html>
