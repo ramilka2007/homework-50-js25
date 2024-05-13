@@ -21,18 +21,18 @@
             <header className="header">
                 <div className="container header-inner">
                     <a href="#" className="logo">
-                        <img src="images/logo.svg" alt="GG Promarket"/>
+                        <img src={props.logo} alt="GG Promarket"/>
                     </a>
                     <nav className="main-nav">
                         <ul>
-                            <li><a href="#">Оплата</a></li>
-                            <li><a href="#">Доставка</a></li>
-                            <li><a href="#">Поставщикам</a></li>
-                            <li><a href="#">Статьи</a></li>
-                            <li><a href="#">Контакты</a></li>
+                            <li><a href="#">{props.linav1}</a></li>
+                            <li><a href="#">{props.linav2}</a></li>
+                            <li><a href="#">{props.linav3}</a></li>
+                            <li><a href="#">{props.linav4}</a></li>
+                            <li><a href="#">{props.linav5}</a></li>
                         </ul>
                     </nav>
-                    <button className="btn-cart" type="button"><span>2</span></button>
+                    <button className="btn-cart" type="button"><span>{props.button}</span></button>
                 </div>
             </header>
         );
@@ -42,20 +42,12 @@
         return (
             <main className="container">
                 <div className="main-block">
-                    <h1 className="main-title">Сантехника от GG Promarket</h1>
+                    <h1 className="main-title">{props.title}</h1>
                     <div className="main-info">
-                        <p>GG Promarket — крупный ритейлер сантехнического оборудования, плитки и аксессуаров. Мы нацелены на     то,
-                            чтобы сделать процесс выбора
-                            и покупки сантехники максимально простым и интуитивно понятным. <br/>
-                            При создании и обновлении сайта santehnika-online.ru мы продумали логичную структуру каталога,
-                            организовали систему поиска, снабдили карточки товаров подробными описаниями и характеристиками.
-                        </p>
-                        <p>Выбирать оборудование в нашем магазине легко даже тем, кто впервые имеет дело с сантехникой. А     уточнить
-                            детали и получить информацию
-                            о совместимости товаров круглосуточно помогут опытные консультанты нашего контакт-центра. С нами вы
-                            полюбите выбирать!</p>
+                        <p>{props.info1}</p>
+                        <p>{props.info2}</p>
                     </div>
-                    <img src="images/main-photo.jpg" alt="Сантехника от GG Promarket" className="main-img"/>
+                    <img src={props.img} alt={props.title} className="main-img"/>
                 </div>
             </main>
         );
@@ -67,17 +59,16 @@
                 <div className="container">
                     <div className="informations">
                         <div className="info car">
-                            <p>Быстрая доставка
-                                <br/> по Москве и в любой регион России</p>
+                            <p>{props.delivery}</p>
                         </div>
                         <div className="info shield">
-                            <p>Все товары имеют официальную гарантию производителя</p>
+                            <p>{props.shield}</p>
                         </div>
                         <div className="info cargo">
-                            <p>Более 100 000 товаров</p>
+                            <p>{props.cargo}</p>
                         </div>
                         <div className="info money">
-                            <p>Любой способ оплаты</p>
+                            <p>{props.money}</p>
                         </div>
                     </div>
                 </div>
@@ -90,17 +81,17 @@
             <section className="much-more">
                 <div className="container titles">
                     <div className="collection">
-                        <h2><a href="#">Коллекции плитки</a></h2>
+                        <h2><a href="#">{props.title}</a></h2>
                         <div className="tiles">
                             <div className="img-ginardo">
-                                <img src="images/ginardo.png" alt="Гинардо"/>
-                                <p className="model-of-tile">Гинардо</p>
-                                <p>Kerama Marazzi</p>
+                                <img src={props.ginardoImg} alt="Гинардо"/>
+                                <p className="model-of-tile">{props.ginardo}</p>
+                                <p>{props.company1}</p>
                             </div>
                             <div className="img-vestanvind">
-                                <img src="images/vestanvind.png" alt="Вестанвинд"/>
-                                <p className="model-of-tile">Вестанвинд</p>
-                                <p>LB-Ceramics</p>
+                                <img src={props.vestanvindImg} alt="Вестанвинд"/>
+                                <p className="model-of-tile">{props.vestanvind}</p>
+                                <p>{props.company2}</p>
                             </div>
                         </div>
                     </div>
@@ -204,7 +195,42 @@
     const website = (
         <>
             <div>
-                <Header />
+                <Header
+                    logo="images/logo.svg"
+                    linav1="Оплата"
+                    linav2="Доставка"
+                    linav3="Поставщикам"
+                    linav4="Статьи"
+                    linav5="Контакты"
+                    button="2"/>
+
+                <MainBlock
+                    title="Сантехника от GG Promarket"
+                    info1="GG Promarket — крупный ритейлер сантехнического оборудования, плитки и аксессуаров. Мы нацелены на     то,
+                            чтобы сделать процесс выбора
+                            и покупки сантехники максимально простым и интуитивно понятным.
+                            При создании и обновлении сайта santehnika-online.ru мы продумали логичную структуру каталога,
+                            организовали систему поиска, снабдили карточки товаров подробными описаниями и характеристиками."
+                    info2="Выбирать оборудование в нашем магазине легко даже тем, кто впервые имеет дело с сантехникой. А     уточнить
+                            детали и получить информацию
+                            о совместимости товаров круглосуточно помогут опытные консультанты нашего контакт-центра. С нами вы
+                            полюбите выбирать!"
+                    img="images/main-photo.jpg"/>
+
+                <Description
+                    delivery="Быстрая доставка по Москве и в любой регион России"
+                    shield="Все товары имеют официальную гарантию производителя"
+                    cargo="Более 100 000 товаров"
+                    money="Любой способ оплаты"/>
+
+                <MuchMore
+                    title="Коллекции плитки"
+                    ginardoImg="images/ginardo.png"
+                    ginardo="Гинардо"
+                    company1="Kerama Marazzi"
+                    vestanvindImg="images/vestanvind.png"
+                    vestanvind="Вестанвинд"
+                    company2="LB-Ceramics"/>
             </div>
         </>
     );
