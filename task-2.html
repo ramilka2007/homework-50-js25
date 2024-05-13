@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+</head>
+<body>
+<div id="app"></div>
+<script type="text/babel">
+    const Header = (props) => {
+        return (
+            <header className="header">
+                <div className="container header-inner">
+                    <a href="#" className="logo">
+                        <img src="images/logo.svg" alt="GG Promarket"/>
+                    </a>
+                    <nav className="main-nav">
+                        <ul>
+                            <li><a href="#">Оплата</a></li>
+                            <li><a href="#">Доставка</a></li>
+                            <li><a href="#">Поставщикам</a></li>
+                            <li><a href="#">Статьи</a></li>
+                            <li><a href="#">Контакты</a></li>
+                        </ul>
+                    </nav>
+                    <button className="btn-cart" type="button"><span>2</span></button>
+                </div>
+            </header>
+        );
+    };
+
+    const MainBlock = (props) => {
+        return (
+            <main className="container">
+                <div className="main-block">
+                    <h1 className="main-title">Сантехника от GG Promarket</h1>
+                    <div className="main-info">
+                        <p>GG Promarket — крупный ритейлер сантехнического оборудования, плитки и аксессуаров. Мы нацелены на     то,
+                            чтобы сделать процесс выбора
+                            и покупки сантехники максимально простым и интуитивно понятным. <br/>
+                            При создании и обновлении сайта santehnika-online.ru мы продумали логичную структуру каталога,
+                            организовали систему поиска, снабдили карточки товаров подробными описаниями и характеристиками.
+                        </p>
+                        <p>Выбирать оборудование в нашем магазине легко даже тем, кто впервые имеет дело с сантехникой. А     уточнить
+                            детали и получить информацию
+                            о совместимости товаров круглосуточно помогут опытные консультанты нашего контакт-центра. С нами вы
+                            полюбите выбирать!</p>
+                    </div>
+                    <img src="images/main-photo.jpg" alt="Сантехника от GG Promarket" className="main-img"/>
+                </div>
+            </main>
+        );
+    };
+
+    const Description = (props) => {
+        return (
+            <div className="description">
+                <div className="container">
+                    <div className="informations">
+                        <div className="info car">
+                            <p>Быстрая доставка
+                                <br/> по Москве и в любой регион России</p>
+                        </div>
+                        <div className="info shield">
+                            <p>Все товары имеют официальную гарантию производителя</p>
+                        </div>
+                        <div className="info cargo">
+                            <p>Более 100 000 товаров</p>
+                        </div>
+                        <div className="info money">
+                            <p>Любой способ оплаты</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    };
+
+    const MuchMore = (props) => {
+        return (
+            <section className="much-more">
+                <div className="container titles">
+                    <div className="collection">
+                        <h2><a href="#">Коллекции плитки</a></h2>
+                        <div className="tiles">
+                            <div className="img-ginardo">
+                                <img src="images/ginardo.png" alt="Гинардо"/>
+                                <p className="model-of-tile">Гинардо</p>
+                                <p>Kerama Marazzi</p>
+                            </div>
+                            <div className="img-vestanvind">
+                                <img src="images/vestanvind.png" alt="Вестанвинд"/>
+                                <p className="model-of-tile">Вестанвинд</p>
+                                <p>LB-Ceramics</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="promotion">
+                        <h3>Акции</h3>
+                        <div className="cards">
+                            <div className="card liquidizer">
+                                <a href="#">
+                                    <img src="images/liquidizer.jpg" alt="Смеситель Hansgrohe Logis 71070000"/>
+                                </a>
+                                <a href="#" className="promotion-link">акция</a>
+                                <p className="product">Смеситель Hansgrohe Logis 71070000 для раковины</p>
+                                <p className="country">Германия</p>
+                                <b>6 050 ₽</b>
+                                <button className="btn" type="button">в корзину</button>
+                                <span>7 601 ₽</span>
+                            </div>
+                            <div className="card shower-cabin">
+                                <a href="#">
+                                    <img src="images/shower-cabin.jpg" alt="Душевая кабина Black&White Galaxy G8800"/>
+                                </a>
+                                <a href="#" className="promotion-link">акция</a>
+                                <p className="product">Душевая кабина Black&White Galaxy G8800, 80 x 110 см</p>
+                                <p className="country">Германия</p>
+                                <b>84 000 ₽</b>
+                                <button className="btn" type="button">в корзину</button>
+                                <span>90 580 ₽</span>
+                            </div>
+                            <div className="card bath">
+                                <a href="#">
+                                    <img src="images/bath.jpg" alt="Ванна акриловая"/>
+                                </a>
+                                <a href="#" className="promotion-link">акция</a>
+                                <p className="product">Ванна акриловая Am.Pm Spirit W72A-160L100W-A2, 160 x 100 см, левосторонняя</p>
+                                <p className="country">Германия</p>
+                                <b>29 990 ₽</b>
+                                <button className="btn" type="button">в корзину</button>
+                                <span>36 900 ₽</span>
+                            </div>
+                            <div className="card toilet">
+                                <a href="#">
+                                    <img src="images/toilet.jpg" alt="Унитаз Laguraty 8074"/>
+                                </a>
+                                <a href="#" className="promotion-link">акция</a>
+                                <p className="product">Унитаз Laguraty 8074 крышка микролифт, с функцией биде</p>
+                                <p className="country">Китай</p>
+                                <b>32 108 ₽</b>
+                                <button className="btn" type="button">в корзину</button>
+                                <span>34 900 ₽</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="news">
+                        <h3><a href="#" className="news-link">Статьи</a></h3>
+                        <div className="articles">
+                            <div className="article accessory">
+                                <img src="images/about-accessories.jpg" alt="аксессуары для ванной"/>
+                                <p> <a href="#"> Актуальные и необычные аксессуары для ванной комнаты</a> </p>
+                            </div>
+                            <div className="article temperature">
+                                <img src="images/about-water.jpg" alt="горячая вода"/>
+                                <p><a href="#">Какой температуры должна быть горячая вода?</a></p>
+                            </div>
+                            <div className="article about-toilet">
+                                <img src="images/about-toilet.jpg" alt="Конденсат на бачке унитаза"/>
+                                <p><a href="#">Конденсат на бачке унитаза: причины появления и способы устранения</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        )
+    };
+
+    const Footer = (props) => {
+        return (
+            <footer>
+                <div className="adress">
+                    <div className="container top-footer">
+                        <span>© 2020 ggpromarket.ru</span>
+                        <b>8 495 018-32-10</b>
+                        <p>Склад: <br/>
+                            Москва, ул. Салтыковская, 6 стр 11
+                            <a href="#">zakaz@ggpromarket.ru</a></p>
+                    </div>
+                </div>
+                <div className="container bottom-footer">
+                    <p>Копирование всех составляющих частей сайта в какой бы то ни было форме без письменного разрешения
+                        владельцев авторских прав запрещено. Сайт носит исключительно информационный характер, и ни при
+                        каких
+                        условиях не является публичной офертой, определяемой положениями статьи 437(2) Гражданского кодекса
+                        Российской Федерации.Наличие и цены уточняйте у наших операторов.</p>
+                    <span>Сайт использует технологию cookie. Используя сайт, Вы соглашаетесь с <a href="#">правилами
+                    использования cookie</a> , а
+                также даете <a href="#">согласие на обработку персональных данных</a></span>
+                </div>
+            </footer>
+        );
+    };
+
+    const website = (
+        <>
+            <div>
+                <Header />
+            </div>
+        </>
+    );
+
+    ReactDOM.render(website, document.getElementById("app"))
+</script>
+</body>
+</html>
