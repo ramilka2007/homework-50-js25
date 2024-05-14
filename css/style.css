@@ -242,30 +242,13 @@ body{
     padding: 6px 12px;
     margin-left: 41px;
     box-sizing: border-box;
+    margin-bottom: 10px;
 }
 
 .btn:hover{
     background: #2B7BC6;
     color: #FFFFFF;
     transition: 1s;
-}
-
-.card span{
-    display: inline-block;
-    padding: 4px 203px 22px 20px;
-    font-weight: 700;
-    font-size: 18px;
-    line-height: 24px;
-    text-decoration-line: line-through;
-    color: #EA1649;
-}
-
-.news-link{
-    font-weight: 700;
-    font-size: 30px;
-    line-height: 36px;
-    color: #000000;
-    text-decoration: none;
 }
 
 .articles{
@@ -303,6 +286,7 @@ body{
     justify-content: space-between;
     align-items: center;
     padding: 22px 0;
+    margin-top: 10px;
 }
 
 .top-footer span{
@@ -327,23 +311,4 @@ body{
 .top-footer a{
     color: #1061AB;
     text-decoration: none;
-}
-
-.bottom-footer{
-    padding: 27px 0 43px;
-}
-
-.bottom-footer p{
-    line-height: 24px;
-    color: #99A3A9;
-    margin: 0 0 23px;
-}
-
-.bottom-footer span{
-    color: #99A3A9;
-}
-
-.bottom-footer a{
-    text-decoration: none;
-    color: #2B7BC6;
 }
